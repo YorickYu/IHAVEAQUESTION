@@ -59,5 +59,5 @@ System.out.println("use time: " + (System.currentTimeMillis() - startTime) + "ms
 
 > 执行结果：use time: 8014ms
 
-**这是为什么？**
+**这是为什么？** - 指针逃逸
 
