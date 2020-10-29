@@ -46,3 +46,18 @@ System.out.println("use time: " + (System.currentTimeMillis() - startTime) + "ms
 
 **这是为什么？**
 
+再试一下下面这段代码：
+
+```java
+long startTime = System.currentTimeMillis();
+for (int i = 0; i < 100000000; i++) {
+		Object o = new Object();
+		o.hashCode();
+}
+System.out.println("use time: " + (System.currentTimeMillis() - startTime) + "ms");
+```
+
+> 执行结果：use time: 8014ms
+
+**这是为什么？**
+
