@@ -61,3 +61,4 @@ System.out.println("use time: " + (System.currentTimeMillis() - startTime) + "ms
 
 **这是为什么？** - 指针逃逸
 
+***9-20201031*** [JDK1.7 HashMap 链表头插疑问？](http://yloopdaed.icu/2020/10/31/question-of-hashmap-put/)
