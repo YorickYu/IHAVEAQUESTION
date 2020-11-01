@@ -20,7 +20,7 @@
 
 1 因为HashMap的put操作会进行modCount++
 
-2 modCount声明时也没有指明volatile
+2 modCount声明时也没有指明volatile和CAS锁
 
 那么多线程put是否会造成modCount的值不准确？
 
@@ -34,7 +34,7 @@ static void atomicTest() throws InterruptedException {
     new Thread(new Runnable() {
         @Override
         public void run() {
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < 10000; i++) {
                 m.put(i, String.valueOf(i).hashCode());
             }
         }
@@ -43,7 +43,7 @@ static void atomicTest() throws InterruptedException {
     new Thread(new Runnable() {
         @Override
         public void run() {
-            for (int i = 150; i < 200; i++) {
+            for (int i = 10000; i < 20000; i++) {
                 m.put(i, String.valueOf(i).hashCode());
             }
         }
@@ -55,9 +55,11 @@ static void atomicTest() throws InterruptedException {
 }
 ```
 
-运行的结果是，如果循环次数不多，最后可以保证modCount的数值正确。但是提升循环插入的次数，会锁住一个线程，导致其他线程的数据没有插入成功，但是modCount的值依然是正确的。
+~~运行的结果是，如果循环次数不多，最后可以保证modCount的数值正确。但是提升循环插入的次数，会锁住一个线程，导致其他线程的数据没有插入成功，但是modCount的值依然是正确的。~~
 
-具体这个魂循环次数设定的阈值，我也没有过多尝试。至少目前我没有因为++计算不是原子性的原因出现过fast-fail
+~~具体这个魂循环次数设定的阈值，我也没有过多尝试。至少目前我没有因为++计算不是原子性的原因出现过fast-fail~~
+
+结果有意外收获：[HashMap modCount fast-fail X原子性](http://yloopdaed.icu/2020/11/01/hashmap-modCount/)
 
 
 
