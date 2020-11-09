@@ -10,6 +10,25 @@
 
 ****
 
+***11-202011-9*** ThreadLocalMap的set方法中有这样一行注释：
+
+```
+// We don't use a fast path as with get() because it is at
+// least as common to use set() to create new entries as
+// it is to replace existing ones, in which case, a fast
+// path would fail more often than not.
+```
+这段话如何理解？
+
+源码中ThreadLocalMap的set方法需要两个参数：ThreadLocal key 和 Object value。这个传入的key其实就是ThreadLocal本身。
+那么合理的疑问是：
+为什么set方法不直接只接收value值，默认在set方法内部获取ThreadLocal实例呢？
+同样的，get方法也需要传递一个参数ThreadLocal key，为什么不能直接在方法中获取呢？
+
+上面这段注释也许就是在解释这个疑问，意思大概就是这么传参使用比不传参的成功率更高。
+
+但是我并不太清楚为什么，一个ThreadLocal对应一个线程。其中的ThreadLocalMap对应的Entry数组里面也只存放一个键值对，这个Key就是ThreadLocal对象本身。并发操作时也是如此，有人能稍微点拨一下么？
+
 
 
 ***10-20201101*** HashMap源码记录modCount++这个计算方式在多线程操作时如果不能保证原子性，那么岂不是也有可能触发ConcurrentModificationException异常？
