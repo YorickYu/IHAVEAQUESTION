@@ -116,7 +116,7 @@ System.out.println("use time: " + (System.currentTimeMillis() - startTime) + "ms
 **这是为什么？** - 指针逃逸
 
 ***7-20201029*** 今天下班在地铁站里面，一条长长的通道，密度很大。有些两三个闲谈，有些低头看手机走路，有些穿来穿去走的比较着急。不同方向不同路线的都有，我就想到一个问题：假设从上往下走的人数和从下往上走的人数相同，但是不能控制每个人行走的路线和速度，怎么样设置指引才能让这条通道的通行效率最高？
-![metro](https://yloopdaed-oss.oss-cn-beijing.aliyuncs.com/metro.png)
+![metro](https://yloopdaed-public.oss-cn-shanghai.aliyuncs.com/metro.png)
 
 相似的问题让我想到了“幽灵堵车”，大概的意思就是如果若干辆汽车沿着一个大圆环的公路行驶。因为驾驶习惯等种种原因会导致汽车都拥挤的集中在某一个区域，而公路的大部分路段都是没车的。
 
