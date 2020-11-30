@@ -10,7 +10,15 @@
 
 ****
 
-***11-202011-9*** ThreadLocalMap的set方法中有这样一行注释：
+***12-20201130*** AQS入队的线程parkAndCheckInterrupt()方法中，return Thread.interrupted(); 有什么意义？
+```
+private final boolean parkAndCheckInterrupt() {
+    LockSupport.park(this);
+    return Thread.interrupted();
+}
+
+
+***11-20201109*** ThreadLocalMap的set方法中有这样一行注释：
 
 ```
 // We don't use a fast path as with get() because it is at
