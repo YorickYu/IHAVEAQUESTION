@@ -16,7 +16,7 @@ private final boolean parkAndCheckInterrupt() {
     LockSupport.park(this);
     return Thread.interrupted();
 }
-
+```
 
 ***11-20201109*** ThreadLocalMap的set方法中有这样一行注释：
 
