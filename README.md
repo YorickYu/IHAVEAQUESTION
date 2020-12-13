@@ -10,6 +10,10 @@
 
 ****
 
+***14-20201213*** 主线程中的ThreadLocal.ThreadLocalMap中初始添加的几个Entry是做什么的？
+
+![](https://yloopdaed-oss.oss-cn-beijing.aliyuncs.com/threadloacl-defaultvalues.png)
+
 ***13-20201201*** AQS释放共享锁doReleaseShared()方法中compareAndSetWaitStatus(h, 0, Node.PROPAGATE)有什么意义？
 ```
 private void doReleaseShared() {
