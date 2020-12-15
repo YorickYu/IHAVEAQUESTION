@@ -10,6 +10,14 @@
 
 ****
 
+***15-20201215*** ThreadLocalMap的Entry[]数组中，有没有可能出现重复的Entry？为什么？
+
+​	这是我在阅读ThreadLocal源码的过期Entry清理机制中想到的一个问题。感觉除了扩容过程以外，Entry[]数组的过期处理都是部分处理。
+
+​	那么有没有可能会出现重复的Entry呢？
+
+​	理论上应该是不存在这种情况的。但是我没办法验证。
+
 ***14-20201213*** 主线程中的ThreadLocal.ThreadLocalMap中初始添加的几个Entry是做什么的？
 
 ![](https://yloopdaed-public.oss-cn-shanghai.aliyuncs.com/threadloacl-defaultvalues.png)
