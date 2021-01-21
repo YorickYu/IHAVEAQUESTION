@@ -82,6 +82,7 @@ private final boolean parkAndCheckInterrupt() {
 
 但是我并不太清楚为什么，一个ThreadLocal对应一个线程。其中的ThreadLocalMap对应的Entry数组里面也只存放一个键值对，这个Key就是ThreadLocal对象本身。并发操作时也是如此，有人能稍微点拨一下么？
 
+更新: ThreadLocal单数组结构是如何解决hash冲突的。[尝试阅读ThreadLocal源码-Hash冲突、启动/探测式清理、扩容](https://yloopdaed.icu/2020/12/13/threadlocal2/?highlight=thread)
 
 
 ***10-20201101*** HashMap源码记录modCount++这个计算方式在多线程操作时如果不能保证原子性，那么岂不是也有可能触发ConcurrentModificationException异常？
