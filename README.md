@@ -10,6 +10,16 @@
 
 ****
 
+***17-20210305*** RabbitMq相关
+
+Topics模式的Exchange，生产消息时将不同路由地址的消息插入同一个队列，消费的时候做一个临时队列消费。
+
+这种方式如果不考虑死信、延迟队列的话是可以实现的。
+
+下面的采纳答案中指出这种模式不符合 amqp 协议。需要注意
+
+![](https://yloopdaed-public.oss-cn-shanghai.aliyuncs.com/rabbitmq.png)
+
 ***16-20210227*** 如图
 
 ![](https://yloopdaed-public.oss-cn-shanghai.aliyuncs.com/chm.png)
