@@ -10,9 +10,9 @@
 
 ****
 
-18-20210307 线程池Worker对象结构
+***18-20210307*** 线程池Worker对象结构
 
-![](https://yloopdaed-public.oss-cn-shanghai.aliyuncs.com/worker.jpg){:height="50%" width="50%"}
+<img src="https://yloopdaed-public.oss-cn-shanghai.aliyuncs.com/worker.jpg" align="center" height="48%" width="48%" >
 
 创建Worker对象时，堆栈空间开辟问题和指针指向问题
 
