@@ -10,7 +10,13 @@
 
 ****
 
-***17-20210305*** RabbitMq相关
+18-20210307 线程池Worker对象结构
+
+![](https://yloopdaed-public.oss-cn-shanghai.aliyuncs.com/worker.jpg)
+
+创建Worker对象时，堆栈空间开辟问题和指针指向问题
+
+***17-20210305*** RabbitMQ相关
 
 Topics模式的Exchange，生产消息时将不同路由地址的消息插入同一个队列，消费的时候做一个临时队列消费。
 
