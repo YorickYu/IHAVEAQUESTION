@@ -12,7 +12,7 @@
 
 18-20210307 线程池Worker对象结构
 
-![](https://yloopdaed-public.oss-cn-shanghai.aliyuncs.com/worker.jpg)
+![](https://yloopdaed-public.oss-cn-shanghai.aliyuncs.com/worker.jpg 400*300)
 
 创建Worker对象时，堆栈空间开辟问题和指针指向问题
 
