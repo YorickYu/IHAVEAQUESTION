@@ -10,6 +10,26 @@
 
 ****
 
+***18=9-20210416*** Guava ImmutableMap 为什么要这么声明构造方法？
+
+![](https://yloopdaed-public.oss-cn-shanghai.aliyuncs.com/guava-immutablemap.png)
+
+1 如果map中元素较少，可以用上面的方法创建
+```java
+ImmutableMap.of(key, value, key2, value2); // ...up to five k-v pairs
+```
+2 否则，使用建造者模式
+```java
+ImmutableMap.builder()
+   .put(key, value)
+   .put(key2, value2)
+   // ...
+   .build();
+```
+
+总觉得Guava这么简洁的框架，写这么多重复的构造方法有点奇怪。有什么设计上的高深之处吗？
+为什么不直接改成入参 Entry<K,V> ... e 这种？
+
 ***18-20210307*** 线程池Worker对象结构
 
 <img src="https://yloopdaed-public.oss-cn-shanghai.aliyuncs.com/worker.jpg" align="center" height="58%" width="58%" >
