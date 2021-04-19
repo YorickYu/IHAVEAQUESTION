@@ -10,7 +10,11 @@
 
 ****
 
-***18=9-20210416*** Guava ImmutableMap 为什么要这么声明构造方法？
+***20-20200420*** Java8到底有什么新特性？
+
+[面试官：Java8到底有什么新特性？](https://yloopdaed.icu/2021/04/20/diff-of-java8/)
+
+***19-20210416*** Guava ImmutableMap 为什么要这么声明构造方法？
 
 ![](https://yloopdaed-public.oss-cn-shanghai.aliyuncs.com/guava-immutablemap.png)
 
